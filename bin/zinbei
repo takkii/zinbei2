@@ -2,15 +2,12 @@
 # -*- coding: utf-8 -*-
 # vim: filetype=ruby
 
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-
 module Zinbei
 
 def version
-  require 'version'
-  print Zinbei::VERSION
+  VERSION = '2.0.1'.map!(&:freeze).freeze
   print ' : [Power_by_Ruby] '
+  puts VERSION
 end
 
 #バージョンの変更点
@@ -69,7 +66,17 @@ end
 
 
 def datetime
-require 'datetime'
+require 'date'
+
+print '時刻を表示:'
+t = Time.new #今日の日付と時刻
+puts t.strftime('%Y年%m月%d日　%H時%M分%S秒')
+t = Time.new
+x = Time.mktime(t.year,t.month,t.day)
+y = Time.mktime(t.year+1,1,1)
+print ('来年の1月1日まであと: ')
+print ((y-x) /60/60/24).round
+print ' 日です'
 end
 
 
@@ -207,24 +214,66 @@ puts 'RubyShell(Zinbei) is Copyright Takayuki Kamiyama,I made in 2012.'
 end
 
 def str
-  require 'str'
+  open(ARGV[1]) do |f|
+  while (name = f.readlines)
+    name.sort!
+    str = name.join(', ')
+    p str.chomp!
+    name.each do |n|
+    puts n
+    end
+    exit!
+ end
+end
 end
 
 def line
-  require 'io'
+count = 0
+
+open(ARGV[1]) do |f|
+  while f.gets
+    f.each_line do
+      count += 1
+    end
+  end
+  print 'LineNumber is : '
+  puts count
+
+    print 'Did it read to the last of a page?：'
+    puts f.eof?
+  end
 end
 
 def upcase
-  require 'up'
+open(ARGV[1]) do |f|
+  while (name = f.readlines)
+    name.encode('UTF-8').chomp!
+    puts name.upcase!
+ exit!
+ end
+end
 end
 
 def downcase
-  require 'down'
+open(ARGV[1]) do |f|
+  while (name = f.readlines)
+    name.encode('UTF-8').chomp!
+    puts name.downcase!
+ exit!
+ end
+end
 end
 
 
 def num
-  require 'number'
+open(ARGV[1]) do |f|
+    while (name = f.gets)
+      risk = name.encode('SJIS')
+       printf('%4d : %s',f.lineno, risk)
+   end
+   puts ''
+    exit!
+end
 end
 
 module_function :start,:version,:datetime,:license,:command,:soft,:str,:line,:upcase,:downcase,:num
@@ -253,7 +302,16 @@ case
 when one.nil?
 Zinbei.soft
 when one.match(v)
-require 'zinbei/ika'
+a=rand(15)
+print '～'
+i = 0
+i < a
+0.step(a) do |_|
+  print '～'
+
+end
+puts '＜コ：彡'
+puts
 Zinbei.version
 when one.match(ve)
 Zinbei.version

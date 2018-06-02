@@ -4,11 +4,6 @@
 # -*- coding: utf-8 -*-
 # vim: filetype=ruby
 
-#require 'tanraku'
-
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-
 class Emerald
 
   attr_accessor :fibonacci, :fizzbizz,:version, :kurage
