@@ -5,9 +5,8 @@
 module Zinbei
 
 def version
-  VERSION = '2.0.1'.map!(&:freeze).freeze
-  print ' : [Power_by_Ruby] '
-  puts VERSION
+  ver = '2.0.1'.freeze
+  puts ver + ' : [Power_by_Ruby] '
 end
 
 #バージョンの変更点
