@@ -13,9 +13,9 @@ def shibu_onp
 
 begin
 
-require 'zinbei/suihan'
-require 'zinbei/kome'
-require 'zinbei/rice'
+require 'suihan'
+require 'kome'
+require 'rice'
 
 rescue SystemCallError => ex
 	puts ex.backtrace
@@ -37,7 +37,7 @@ end
 end
 
 def version
-	require 'zinbei/version'
+	require 'version'
 end
 
 end

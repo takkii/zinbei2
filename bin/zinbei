@@ -8,7 +8,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 module Zinbei
 
 def version
-  require 'zinbei/version'
+  require 'version'
   print Zinbei::VERSION
   print ' : [Power_by_Ruby] '
 end
@@ -69,7 +69,7 @@ end
 
 
 def datetime
-require 'zinbei/datetime'
+require 'datetime'
 end
 
 
@@ -207,24 +207,24 @@ puts 'RubyShell(Zinbei) is Copyright Takayuki Kamiyama,I made in 2012.'
 end
 
 def str
-  require 'zinbei/str'
+  require 'str'
 end
 
 def line
-  require 'zinbei/io'
+  require 'io'
 end
 
 def upcase
-  require 'zinbei/up'
+  require 'up'
 end
 
 def downcase
-  require 'zinbei/down'
+  require 'down'
 end
 
 
 def num
-  require 'zinbei/number'
+  require 'number'
 end
 
 module_function :start,:version,:datetime,:license,:command,:soft,:str,:line,:upcase,:downcase,:num
