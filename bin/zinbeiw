@@ -209,8 +209,7 @@ begin
       when line.match(dark[0])
 
         begin
-          puts '
-          ワンライナー、１行コードの館へようこそ。さぁ、はじめましょう！'
+          puts '１行コードの館へようこそ'.center(60,'-')
           print '>'
           re = gets.chomp
           puts ''
@@ -225,7 +224,7 @@ begin
           retry
 
         ensure
-          puts '終了は exit を入力してください！'
+          puts 'exit を入力してください'.center(60,'-')
         end
 
         print '>'
@@ -748,7 +747,7 @@ result      rssの記号を個数としてカウントします
 
       when line.match(dark[1])
         begin
-          puts 'eval族の館へようこそ...簡単な文字列を評価してください!'
+          puts '簡単な文字列を評価してください!'.center(60,'-')
           print '>'
           re = gets.chomp
           puts ''
@@ -763,7 +762,7 @@ result      rssの記号を個数としてカウントします
           retry
 
         ensure
-          puts '終了は exit を入力してください！'
+		puts 'exit を入力してください！'.center(60,'-')
         end
         print '>'
 
