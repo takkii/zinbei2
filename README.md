@@ -61,5 +61,3 @@ zinbei2は商用、法人または個人向け、有償版のzinbeiです。
 [箱入り娘のサポートページ](http://www.hakoirimusume.xyz/)でお買い求めくださいませ。
 
 ＜:ロミ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-![彫刻](https://github.com/takkii/zinbei2/blob/master/image/taka.jpg)
