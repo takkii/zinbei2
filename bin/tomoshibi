@@ -1,16 +1,16 @@
 #!/usr/bin/env ruby
-# -*- coding: utf-8 -*-
+# frozen_string_literal: true
+
 # vim: filetype=ruby
 
 require 'kconv'
 
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Encoding.default_internal = 'SJIS'
 
 class Scan
-
   def search_text
     puts ''
     one = ARGV[0].tosjis
@@ -21,14 +21,12 @@ class Scan
         three = /^(?=.*#{two})/o
 
         begin
-          if str.match(three)||{}[:match]
+          if str.match(three) || {}[:match]
             # active code add.
-            printf('%2d : %s',f.lineno,str)
+            printf('%2d : %s', f.lineno, str)
             puts ''
-          else
           end
-
-        rescue
+        rescue StandardError
           print ''
         ensure
           print ''
@@ -44,13 +42,12 @@ end
 
 one = ARGV[0]
 
-case
-  when one.nil?
-    print 'tomoshibi is zinbei in Copyright Takayuki Kamiyama,I made in 2016.'
-  when one
-    Scan.new.search_text
-  else
-    print 'Not other arguments!'
+if one.nil?
+  print 'tomoshibi is zinbei in Copyright Takayuki Kamiyama,I made in 2016.'
+elsif one
+  Scan.new.search_text
+else
+  print 'Not other arguments!'
 end
 
 __END__
