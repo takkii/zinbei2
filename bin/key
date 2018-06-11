@@ -12,7 +12,6 @@ class Pass
 
     issue = sub = OpenSSL::X509::Name.new
 
-    # ì¬ŽÒî•ñ‚ð•ÏX‚·‚é‰ÓŠ
     sub.add_entry('C', 'JP')
     sub.add_entry('ST', 'Kanazawa city')
     sub.add_entry('CN', 'Takayuki Kamiyama')
