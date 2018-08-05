@@ -1,0 +1,117 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# vim: filetype=ruby
+
+require 'tanraku'
+
+module Boyaki
+  def version
+    eval "print 'Boyaki Version : '"
+    eval "puts '1.0.0'"
+  end
+
+  def start
+    eval "puts '取扱説明書'.center(60,'-')"
+    eval "puts '
+
+    < 使い方 >
+
+    ./boyaki
+
+    > gem install tk
+
+    > boyaki
+    　∟boyakiを起動します
+
+    > boyaki -v
+    　∟boyakiのバージョンを表示します
+
+    > boyaki -h
+    　∟boyakiのヘルプを表示します
+
+    < フォルダ構成 >
+
+    > boyaki
+     ∟log　―　backup.txt
+     ∟boyaki.rb
+     ∟etc...
+
+     自動でフォルダをなければ作成し、
+      テキストファイルを追加します。
+
+    < ライセンス >
+
+    boyakiはMITライセンスです
+
+    '"
+    eval "puts''"
+    eval "puts '取扱説明書'.center(60,'-')"
+  end
+
+  def soft
+    #  Copyright © 2015 Takayuki, Kamiyama
+
+    require 'tk'
+
+    Dir.mkdir('log', perm = 0o777) unless FileTest.exist?('log')
+
+    window = TkRoot.new do
+      title 'boyaki'
+      resizable [0, 0]
+    end
+
+    window1 = TkToplevel.new do
+      title 'boyaki is shout!'
+    end
+
+    TkLabel.new(nil,
+                text: 'やりたいことやってみよう...1.2.3...',
+                fg: 'blue').pack
+
+    entry = TkEntry.new.pack('side' => 'left')
+
+    c = TkButton.new do
+      image TkPhotoImage.new('file' => 'tweet_icon.gif')
+      pack('fill' => 'x', 'padx' => 2.5, 'pady' => 2.5)
+    end
+
+    c.command proc {
+        File.open('log/backup.txt', 'a:utf-8', perm = 0o777) do |f|
+          TkLabel.new(window1,
+                      text: f.puts(entry.value.to_s),
+                      text: entry.value.to_s,
+                      fg: 'white',
+                      bg: 'black').pack('fill' => 'x', 'padx' => 2.5, 'pady' => 2.5)
+  end
+}
+
+    Tk.mainloop
+  end
+
+  module_function :soft, :version, :start
+end
+
+v = /\Aversion\z/
+ve = /\A[-][v]\z/
+h = /\Ahelp\z/
+he = /\A[-][h]\z/
+
+one = ARGV[0]
+
+if one.nil?
+  Boyaki.soft
+elsif one.match?(v)
+  Boyaki.version
+elsif one.match?(ve)
+  Boyaki.version
+elsif one.match?(h)
+  Boyaki.start
+elsif one.match?(he)
+  Boyaki.start
+else
+  eval "puts ''"
+  eval "puts 'Please choose an option.'"
+  eval "puts 'Dear my wife.'"
+  eval "puts ''"
+end

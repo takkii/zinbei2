@@ -175,6 +175,12 @@ module Zinbei
 
     file list output.
 
+    <Sample>
+
+    boyaki
+
+    tubuyaki_gui clone.
+
     '
     puts 'COMMAND'.center(60, '-')
   end
