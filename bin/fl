@@ -9,7 +9,7 @@ puts 'file_name'.center(60,'-')
 
 puts ''
 
-puts Dir.glob('*')
+puts Dir.glob('*').sort
 
 puts ''
 
