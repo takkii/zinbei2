@@ -17,32 +17,32 @@ module Boyaki
 
     < 使い方 >
 
-    ./boyaki
+    環境
 
     > gem install tk
 
+    > git clone https://github.com/takkii/zinbei2.git
+
+    使用
+
     > boyaki
-    　∟boyakiを起動します
+     ∟boyakiを起動します
 
     > boyaki -v
-    　∟boyakiのバージョンを表示します
+     ∟boyakiのバージョンを表示します
 
     > boyaki -h
-    　∟boyakiのヘルプを表示します
+     ∟boyakiのヘルプを表示します
 
     < フォルダ構成 >
 
     > boyaki
-     ∟log　―　backup.txt
+     ∟log ― backup.txt
      ∟boyaki.rb
      ∟etc...
 
      自動でフォルダをなければ作成し、
       テキストファイルを追加します。
-
-    < ライセンス >
-
-    boyakiはMITライセンスです
 
     '"
     eval "puts''"
@@ -66,7 +66,7 @@ module Boyaki
     end
 
     TkLabel.new(nil,
-                text: 'やりたいことやってみよう...1.2.3...',
+                text: '王様の耳はロバの耳...',
                 fg: 'blue').pack
 
     entry = TkEntry.new.pack('side' => 'left')
@@ -112,6 +112,5 @@ elsif one.match?(he)
 else
   eval "puts ''"
   eval "puts 'Please choose an option.'"
-  eval "puts 'Dear my wife.'"
   eval "puts ''"
 end
