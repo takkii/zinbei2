@@ -72,7 +72,7 @@ module Boyaki
     entry = TkEntry.new.pack('side' => 'left')
 
     c = TkButton.new do
-      image TkPhotoImage.new('file' => 'tweet_icon.gif')
+      image TkPhotoImage.new('file' => 'image/tweet_icon.gif')
       pack('fill' => 'x', 'padx' => 2.5, 'pady' => 2.5)
     end
 
