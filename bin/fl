@@ -5,7 +5,7 @@
 
 puts ''
 
-puts 'version'.center(60,'-')
+puts 'file_name'.center(60,'-')
 
 puts ''
 
@@ -13,7 +13,7 @@ puts Dir.glob('./*')
 
 puts ''
 
-puts 'version'.center(60,'-')
+puts 'file_name'.center(60,'-')
 
 puts ''
 

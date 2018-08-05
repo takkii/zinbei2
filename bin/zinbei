@@ -166,6 +166,15 @@ module Zinbei
     night dark.txt huhahahahaha...
 
     dark.txt into word huhahahahaha...
+
+    <Sample>
+
+    cd Ruby
+
+    fl
+
+    file list output.
+
     '
     puts 'COMMAND'.center(60, '-')
   end
