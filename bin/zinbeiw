@@ -85,7 +85,7 @@ begin
 
   denki = %w[Anpea Volt Rister].map!(&:freeze).freeze
 
-  kasa = %w[exit fibonacci2 fizz rss result tenki].map!(&:freeze).freeze
+  kasa = %w[exit fibonacci2 fizz rss result てんき].map!(&:freeze).freeze
 
   print '>'
 
@@ -353,7 +353,7 @@ rss         RSS投稿時間帯を判別します
 
 result      rssの記号を個数としてカウントします
 
-tenki       各地(ID)の天気を表示します
+てんき       各地(ID)の天気を表示します
 
 終了は、exitと入力します...
 
