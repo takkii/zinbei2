@@ -1248,8 +1248,8 @@ result      rssの記号を個数としてカウントします
         puts '調べたい地域のIDを入力してください'
         print '>'
         ID = gets.chomp
-      rescue StandardError => es
-        p es
+      rescue StandardError => eee
+        print eee
         puts 'エラーです。IDを確認してください！'
       end
 
