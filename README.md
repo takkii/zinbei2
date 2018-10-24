@@ -1,3 +1,5 @@
+[![GitHub release](https://img.shields.io/github/release/takkii/zinbei2.svg?style=flat)](GitHub)[![GitHub Status](https://img.shields.io/github/last-commit/takkii/zinbei2.svg?style=flat)](GitHub)
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  ))wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww((
 ((                                                                    ))
