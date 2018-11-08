@@ -44,6 +44,8 @@ gem install zinbei
 
 ```ruby
 brew tap takkii/homebrew-zinbei2
+or
+brew tap takkii/homebrew-personal (zinbei2,zinbeijett2)
 brew update
 brew install zinbei2
 ```
