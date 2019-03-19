@@ -9,14 +9,16 @@ module TestVersion
   module_function
 
   def version
-    puts '1.2.2'.to_i
+    '1.2.2'.to_i
   end
 end
 
 describe 'TestVersion' do
-  it ":expect say '1.2.2' when it receives the greet() message" do
-    versioning = TestVersion.version
-    expect(versioning) == '1.2.2'.to_i
+  context "when it receives the greet() message" do
+    it 'return integer version 1.2.2' do
+      versioning = TestVersion.version
+      expect(versioning) == '1.2.2'.to_i
+    end
   end
 end
 
@@ -35,9 +37,11 @@ class DateTime
 end
 
 describe 'DateTime' do
-  it ":expect say '124日です' when it receives the greet() message" do
-    date = DateTime.new.test1
-    expect(date) == 124
+  context "when it receives the greet() message" do
+    it "expect say 124日です" do
+      date = DateTime.new.test1
+      expect(date) == 124
+    end
   end
 end
 
@@ -53,9 +57,11 @@ class DateOver
 end
 
 describe 'DateOver' do
-  it ":expect say '2017年8月31日' when it receives the greet() message" do
-    dateclock = DateOver.new.test1
-    expect(dateclock) == '2017年8月31日'
+  context "when it receives the greet() message" do
+    it "expect say 2017年8月31日" do
+      dateclock = DateOver.new.test1
+      expect(dateclock) == '2017年8月31日'
+    end
   end
 end
 
