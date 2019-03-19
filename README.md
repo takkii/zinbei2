@@ -1,4 +1,4 @@
-[![GitHub release](https://img.shields.io/github/release/takkii/zinbei2.svg?style=flat)](GitHub)[![GitHub Status](https://img.shields.io/github/last-commit/takkii/zinbei2.svg?style=flat)](GitHub)
+[![GitHub release](https://img.shields.io/github/release/takkii/zinbei2.svg?style=flat)](GitHub)[![GitHub Status](https://img.shields.io/github/last-commit/takkii/zinbei2.svg?style=flat)](GitHub)[![Build Status](https://travis-ci.org/takkii/zinbei2.svg?branch=master)](https://travis-ci.org/takkii/zinbei2)
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  ))wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww((
