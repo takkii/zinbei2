@@ -85,7 +85,7 @@ begin
 
   denki = %w[Anpea Volt Rister].map!(&:freeze).freeze
 
-  kasa = %w[exit fibonacci2 fizz rss result てんき].map!(&:freeze).freeze
+  kasa = %w[exit fibonacci2 fizz rss result てんき atom].map!(&:freeze).freeze
 
   print '>'
 
@@ -355,6 +355,9 @@ result      rssの記号を個数としてカウントします
 
 てんき       各地(ID)の天気を表示します
 
+atom        gem install feedjira
+            atom形式のrssを読み込むことができます
+
 終了は、exitと入力します...
 
 '
@@ -401,6 +404,7 @@ result      rssの記号を個数としてカウントします
           while (liner = d.gets)
             liner.chomp!
             next unless liner.match?(re)
+
             printf('%4d 行目 : %s ', d.lineno, liner)
             print '： Find!(発見!)'
             puts ' '
@@ -1285,6 +1289,47 @@ result      rssの記号を個数としてカウントします
       puts ''
       puts ' 天気概況文 '.center(60, '-')
 
+      print '>'
+
+    elsif line.match?(kasa[6])
+
+      require 'feedjira'
+      require 'date'
+      require 'kconv'
+
+      begin
+        puts ''
+        puts '調べたいRSSのURLを入力してください'
+        puts ''
+        print '>'
+        URL = gets.chomp
+      rescue StandardError => es
+        p es
+        puts 'エラーです。URLを確認してください！'
+      end
+
+      Feedjira.logger.level = Logger::FATAL
+      atom = Feedjira::Feed.fetch_and_parse(URL)
+
+      atom.entries.collect do |entry|
+        v = /[1][0-9]/
+        w = /[0][0-9]/
+        x = /[2][0-4]/
+        s = entry.published.to_time.strftime '%H'
+
+        if s.match?(v)
+          print '#'
+          print ' '
+        elsif s.match?(w)
+          print '$'
+          print ' '
+        elsif s.match?(x)
+          print '@'
+          print ' '
+        end
+      end
+
+      puts ''
       print '>'
 
     else
