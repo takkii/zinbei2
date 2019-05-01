@@ -43,7 +43,7 @@ gem install zinbei
 有償版
 
 ```ruby
-brew tap takkii/homebrew-zinbei2
+brew tap takkii/homebrew-zinbei2（古いバージョン）
 or
 brew tap takkii/homebrew-personal (zinbei2,zinbeijett2)
 brew update
