@@ -43,14 +43,13 @@ gem install zinbei
 有償版
 
 ```ruby
-brew tap takkii/homebrew-zinbei2（古いバージョン）
-or
-brew tap takkii/homebrew-personal (zinbei2,zinbeijett2)
+brew tap takkii/homebrew-personal
 brew update
 brew install zinbei2
 ```
 
-> ※ Vectorで購入したzinbei2のフォルダ内にあるソースコードは、zinbei2リリースの記念品です。更新利用する際は、homebrewのzinbei2を使ってください。毎度、ご購入ありがとうございます。
+> ※ Vectorで購入したzinbei2のフォルダ内にあるソースコードは、zinbei2リリースの記念品です。
+> 更新利用する際は、homebrewのzinbei2を使ってください。毎度、ご購入ありがとうございます。
 
 ＜:ロミ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
