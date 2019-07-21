@@ -6,7 +6,7 @@ zinbei2は商用または個人向け、有償シェルです。
 
 サポートは別料金です。箱入り娘のサポートページでお買い求めくださいませ。
 
-http://www.hakoirimusume.xyz/
+https://takkii.github.io/
 
 ※試用版は、GitHubまたはRubyGemsをお使いください。
 
