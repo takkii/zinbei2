@@ -1,0 +1,47 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# vim: filetype=ruby
+
+lib = File.expand_path('lib', __dir__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+module Piano
+  module_function
+
+  def shibu_onp
+    require 'zinbei/suihan'
+    require 'zinbei/kome'
+    require 'zinbei/rice'
+  rescue SystemCallError => ex
+    puts ex.backtrace
+  rescue IOError => ee
+    puts ee.backtrace
+  rescue Exception => e
+    puts e.backtrace
+  rescue Errno::ENOENT
+    puts '読み込みファイルを指定してください'
+  rescue Errno::EACCES
+    puts 'ファイルへアクセス権限がありません'
+  rescue LoadError
+    puts '対象ファイルがありません'
+  ensure
+    puts ''
+    puts '形態素解析を終了します...'
+    puts ''
+  end
+
+  def version
+    require 'zinbei/version'
+  end
+end
+
+two = ARGV[1]
+
+if two.nil?
+  Piano.shibu_onp
+else
+  Piano.version
+end
+
+__END__

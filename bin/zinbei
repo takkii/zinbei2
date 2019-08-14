@@ -1,0 +1,280 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# vim: filetype=ruby
+
+lib = File.expand_path('lib', __dir__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+module Zinbei
+  def version
+    require 'zinbei/version'
+    print Zinbei::VERSION
+    print ' : [Power_by_Ruby] '
+  end
+
+  # バージョンの変更点
+
+  def start
+    puts '
+
+    == Contributing to zinbei
+
+    ** Fixed **
+    The number of files was reduced.
+
+    Remind zinbei option
+    * add -v,version
+    * add -d,datetime
+    * add -h,help
+    * add -s,start
+
+    New zinbei option
+    **How to use**
+    [zinbei -m notojima.txt]
+    * add -m
+    * add -n
+    * add -o
+    * add -u
+
+    New Shell sava !!
+    sava is powered rubyshell.
+    sme change rantan.
+    rantan is main shell.
+    support hakoirimusume project.
+
+    Please remember
+    this command by zinbeiw
+    * delete * find * remove *exit
+    * rename * makefolder * wordcount
+    * NumberGame *Numbers *loto6 *Encode
+    * OneRunner *Eval * week
+
+    ** Try **
+    zinbeiw
+    >help
+    >exit
+
+    ----Please enter the following words------
+    |   in the command prompt for windows    |
+    |                                        |
+    |              zinbei help               |
+    |                                        |
+    ------------------------------------------
+    wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+        Thank you for reading to the last.
+    wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+    '
+  end
+
+  def datetime
+    require 'zinbei/datetime'
+  end
+
+  def license
+    puts 'LICENSE'.center(60, '-')
+
+    puts '
+    The MIT License
+
+    Copyright (c) 2016 Takayuki Kamiyama
+
+    Permission is hereby granted, free of charge,
+    to any person obtaining a copy of this software and
+    associated documentation files (the [Software]),
+    to deal in the Software without restriction,
+    including without limitation the rights to use, copy, modify,
+    merge, publish, distribute, sublicense,
+    and/or sell copies of the Software,
+    and to permit persons to whom the Software is furnished to do so,
+    subject to the following conditions:
+
+    The above copyright notice and
+    this permission notice shall be included
+    in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED [AS IS],
+    WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+    INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHORS OR
+    COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+    DAMAGES OR OTHER LIABILITY,
+    WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+    ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
+    OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    '
+    puts 'LICENSE'.center(60, '-')
+  end
+
+  def command
+    puts 'COMMAND'.center(60, '-')
+
+    puts '
+    [Zinbei]
+
+    -s,start           Start Pages.
+
+    -v,version         Version Infomation
+
+    -d,datetime        What time is it?
+
+    -l,license         License Infomation
+
+    [Example]
+
+    $zinbei -n notojima.txt
+    $zinbei -m notojima.txt
+    $zinbei -u notojima.txt
+    $zinbei -o notojima.txt
+    $zinbei -z notojima.txt
+
+    -n                 The number line checked end load file.
+
+    -m                 Returned as a character string and the whole is also output.
+
+    -u                 Character string is changed to a capital letter.
+
+    -o                 Character string is changed to lowercase.
+
+    -z                 Text is indicated.
+
+    [rantan is MileStone_version,sme change name.]
+
+    < how to use >
+
+    [rantan] [ File name ] [ String or regular expression ]
+
+    < Example >
+
+    >rantan notojima.txt wajima
+
+    If it evaluates whether there is any character string of wajima
+    to notojima.txt and is in it, one of them will be outputted!
+
+    [japanese name: sava and iruka, English name: scomber and Dolphin ]
+
+    < how to use>
+
+    [sava] [Filename (read)] [Filename (write)] [change before word] [change after word]
+
+    <Example>
+
+    >sava notojima.txt Example.txt roman ruby
+
+    Example.txt new_make_file after roman → ruby changed.
+
+    [night is word write function]
+
+    <how to use>
+
+    [night] [Filename (write)] [want to write word]
+
+    <Example>
+
+    night dark.txt huhahahahaha...
+
+    dark.txt into word huhahahahaha...
+    '
+    puts 'COMMAND'.center(60, '-')
+  end
+
+  def soft
+    puts '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     ))wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww((
+    ((                                                                    ))
+     )) ========= ======  ||\\      || ||========   ||=========  ======   ((
+    ((      / /     ||    || \\     || ||        )) ||             ||      ))
+     ))    / /      ||    ||  \\    || ||        )) ||             ||     ((
+    ((    / /       ||    ||   \\   || ||========   ||=======      ||      ))
+     ))  / /        ||    ||    \\  || ||        )) ||             ||     ((
+    ((  / /         ||    ||     \\ || ||        )) ||             ||      ))
+     )) ========= ======  ||      \\|| ||========   ||=========  ======   ((
+    ((                                                                    ))
+     ))wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww((
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    '
+    puts 'RubyShell(Zinbei) is Copyright Takayuki Kamiyama,I made in 2012.'
+    puts ''
+  end
+
+  def str
+    require 'zinbei/str'
+  end
+
+  def line
+    require 'zinbei/io'
+  end
+
+  def upcase
+    require 'zinbei/up'
+  end
+
+  def downcase
+    require 'zinbei/down'
+  end
+
+  def num
+    require 'zinbei/number'
+  end
+
+  module_function :start, :version, :datetime, :license, :command, :soft, :str, :line, :upcase, :downcase, :num
+end
+
+v = /\Aversion\z/
+ve = /\A[-][v]\z/
+d = /\A[-][d]\z/
+da = /\Adatetime\z/
+h = /\A[-][l]\z/
+he = /\Alicense\z/
+s = /\Astart\z/
+so = /\A[-][s]\z/
+co = /\A[-][h]\z/
+com = /\Ahelp\z/
+m = /\A[-][m]\z/
+n = /\A[-][n]\z/
+u = /\A[-][u]\z/
+o = /\A[-][o]\z/
+z = /\A[-][z]\z/
+
+one = ARGV[0]
+
+if one.nil?
+  Zinbei.soft
+elsif one.match?(v)
+  require 'zinbei/ika'
+  Zinbei.version
+elsif one.match?(ve)
+  Zinbei.version
+elsif one.match?(d)
+  Zinbei.datetime
+elsif one.match?(da)
+  require 'zinbei/ika'
+  Zinbei.datetime
+elsif one.match?(he)
+  Zinbei.license
+elsif one.match?(h)
+  Zinbei.license
+elsif one.match?(s)
+  Zinbei.start
+elsif one.match?(so)
+  Zinbei.start
+elsif one.match?(co)
+  Zinbei.command
+elsif one.match?(com)
+  Zinbei.command
+elsif one.match?(m)
+  Zinbei.str
+elsif one.match?(n)
+  Zinbei.line
+elsif one.match?(o)
+  Zinbei.downcase
+elsif one.match?(u)
+  Zinbei.upcase
+elsif one.match?(z)
+  Zinbei.num
+else
+  puts 'Please choose an option.'
+end
+
+__END__
