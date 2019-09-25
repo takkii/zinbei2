@@ -75,7 +75,7 @@ puts 'まずは、helpと入力してください!コマンドがわかります
 # search words
 
 begin
-  str = %w[sessi kashi exit help].map!(&:freeze).freeze
+  str = %w[sessi kashi help].map!(&:freeze).freeze
 
   once = %w[find delete remove rename makefolder wordcount NumberGame Encode week].map!(&:freeze).freeze
 
@@ -123,8 +123,6 @@ begin
 
       print '>'
 
-    elsif line.match?(str[2])
-      exit!
     elsif line.match?(lucky[0])
 
       class Loto6
@@ -301,7 +299,7 @@ begin
 
       # It is a help document of zinbeic.
 
-    elsif line.match?(str[3])
+    elsif line.match?(str[2])
 
       puts 'COMMAND'.center(60, '-')
 
@@ -352,6 +350,7 @@ fizz        指定した数字のFizzBizz解答を表示します
 rss         RSS投稿時間帯を判別します
 
 result      rssの記号を個数としてカウントします
+            カウント後、zinbeiwを終了します
 
 てんき       各地(ID)の天気を表示します
 
@@ -938,7 +937,7 @@ atom        gem install feedjira (v3.0.0~)
       puts ' 回です'
       puts ''
 
-      print '>'
+      exit!
 
     elsif line.match?(kasa[5])
 
@@ -1359,7 +1358,7 @@ rescue StandardError => exed
 
 # Ruby ensure is Java Exception of finally.
 ensure
-  puts '終了は exit を入力してください！'
+  puts 'exit...終了します、まだ終了してないときはexitを入力してください！'
 end
 
 __END__
