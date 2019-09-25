@@ -103,7 +103,7 @@ begin
         y
       end
       puts '華氏を入力してください!'
-        .print '>'
+      print '>'
       f = gets.to_i
       m = seru(f)
       puts "摂氏は、#{m.round}です。"
