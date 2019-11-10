@@ -1,7 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    crass (1.0.4)
+    crass (1.0.5)
     diff-lcs (1.2.5)
     feedjira (3.0.0)
       loofah (>= 2.2.1)
@@ -9,7 +9,7 @@ GEM
     httparty (0.17.1)
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
-    loofah (2.2.3)
+    loofah (2.3.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mime-types (3.3)
@@ -17,11 +17,11 @@ GEM
     mime-types-data (3.2019.0904)
     mini_portile2 (2.4.0)
     multi_xml (0.6.0)
-    nokogiri (1.10.4)
+    nokogiri (1.10.5)
       mini_portile2 (~> 2.4.0)
-    nokogiri (1.10.4-x64-mingw32)
+    nokogiri (1.10.5-x64-mingw32)
       mini_portile2 (~> 2.4.0)
-    nokogiri (1.10.4-x86-mingw32)
+    nokogiri (1.10.5-x86-mingw32)
       mini_portile2 (~> 2.4.0)
     rake (10.5.0)
     rspec (3.4.0)
