@@ -49,6 +49,7 @@ DEPENDENCIES
   bundler
   feedjira
   httparty
+  loofah (>= 2.3.1)
   rake
   rspec
   tanraku
