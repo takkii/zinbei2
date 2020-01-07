@@ -75,7 +75,7 @@ puts 'まずは、helpと入力してください!コマンドがわかります
 # search words
 
 begin
-  str = %w[sessi kashi exit help].map!(&:freeze).freeze
+  str = %w[sessi kashi help].map!(&:freeze).freeze
 
   once = %w[find delete remove rename makefolder wordcount NumberGame Encode week].map!(&:freeze).freeze
 
@@ -103,7 +103,7 @@ begin
         y
       end
       puts '華氏を入力してください!'
-        .print '>'
+      print '>'
       f = gets.to_i
       m = seru(f)
       puts "摂氏は、#{m.round}です。"
@@ -123,8 +123,6 @@ begin
 
       print '>'
 
-    elsif line.match?(str[2])
-      exit!
     elsif line.match?(lucky[0])
 
       class Loto6
@@ -301,7 +299,7 @@ begin
 
       # It is a help document of zinbeic.
 
-    elsif line.match?(str[3])
+    elsif line.match?(str[2])
 
       puts 'COMMAND'.center(60, '-')
 
@@ -352,10 +350,12 @@ fizz        指定した数字のFizzBizz解答を表示します
 rss         RSS投稿時間帯を判別します
 
 result      rssの記号を個数としてカウントします
+            カウント後、zinbeiwを終了します
 
 てんき       各地(ID)の天気を表示します
 
-atom        gem install feedjira
+atom        gem install feedjira (v3.0.0~)
+            gem install httparty
             atom形式のrssを読み込むことができます
 
 終了は、exitと入力します...
@@ -937,7 +937,7 @@ atom        gem install feedjira
       puts ' 回です'
       puts ''
 
-      print '>'
+      exit!
 
     elsif line.match?(kasa[5])
 
@@ -1294,6 +1294,7 @@ atom        gem install feedjira
     elsif line.match?(kasa[6])
 
       require 'feedjira'
+      require 'httparty'
       require 'date'
       require 'kconv'
 
@@ -1309,9 +1310,9 @@ atom        gem install feedjira
       end
 
       Feedjira.logger.level = Logger::FATAL
-      atom = Feedjira::Feed.fetch_and_parse(URL)
+      atom = HTTParty.get(URL).body
 
-      atom.entries.collect do |entry|
+      Feedjira.parse(atom).entries.collect do |entry|
         v = /[1][0-9]/
         w = /[0][0-9]/
         x = /[2][0-4]/
@@ -1357,7 +1358,7 @@ rescue StandardError => exed
 
 # Ruby ensure is Java Exception of finally.
 ensure
-  puts '終了は exit を入力してください！'
+  puts 'exit...終了します、まだ終了してないときはexitを入力してください！'
 end
 
 __END__
