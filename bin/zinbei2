@@ -5,8 +5,8 @@
 
 module Zinbei
   def version
-    ver = '2.0.6.1'
-    puts ver + ' : [ Power_by_Ruby ] '
+    ver = '2.1.0'
+    puts ver + ' : [Power_by_Ruby] '
   end
 
   # バージョンの変更点
