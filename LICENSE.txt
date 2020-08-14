@@ -4,11 +4,13 @@ zinbei2は商用または個人向け、有償シェルです。
 
 30ドル(3000円程度)で販売します。
 
-[zinbei2_vector](https://www.vector.co.jp/soft/data/prog/se516665.html?_ga=2.75685973.1169120073.1527936228-1534765938.1527936228)
+zinbei2_vector
+https://www.vector.co.jp/soft/data/prog/se516665.html?_ga=2.75685973.1169120073.1527936228-1534765938.1527936228
 
 スポンサーを募集しています。個人〜法人、企業まで。
 
-[GitHub_sponsor](https://github.com/sponsors/takkii)
+GitHub_sponsor
+https://github.com/sponsors/takkii
 
 ※試用版は、GitHubまたはRubyGemsをお使いください。
 
