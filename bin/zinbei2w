@@ -1278,8 +1278,8 @@ GPL-3.0 License
       result = JSON.parse(json)
       today_tel = result['forecasts'][0]['telop']
       tomor_tel = result['forecasts'][1]['telop']
-      min_tem = result['forecasts'][1]['temperature']['min']['celsius']
-      max_tem = result['forecasts'][1]['temperature']['max']['celsius']
+      min_tem = result['forecasts'][0]['temperature']['min']['celsius']
+      max_tem = result['forecasts'][0]['temperature']['max']['celsius']
       des = result['description']['text']
       des1 = result['description']['publicTime']
       des2 = DateTime.parse(des1)
