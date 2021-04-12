@@ -2,6 +2,7 @@
 # frozen_string_literal: true
 
 # vim: filetype=ruby
+require 'readline'
 
 class Emerald
   attr_accessor :fibonacci, :fizzbizz, :version, :kurage
@@ -87,13 +88,19 @@ begin
 
   kasa = %w[exit fibonacci2 fizz rss result てんき atom].map!(&:freeze).freeze
 
+  WORDS = (str + once + lucky + dark + denki + kasa).map!(&:freeze).freeze
+
+  Readline.completion_proc = proc {|word|
+    WORDS.grep(/\A#{Regexp.quote word}/)
+  }
+
   print '>'
 
   # search words exit!
 
   # Wainting Action code!
 
-  while (line = ARGF.gets)
+  while (line = Readline.readline(""))
 
     line.chomp!
 
