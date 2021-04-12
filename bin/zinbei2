@@ -5,7 +5,7 @@
 
 module Zinbei
   def version
-    ver = '2.1.0'
+    ver = '2.1.1'
     puts ver + ' : [Power_by_Ruby] '
   end
 
