@@ -962,12 +962,10 @@ atom        gem install feedjira (v3.0.0~)
 
       puts '
 
-「livedoor 天気」から「お天気Webサービス
-（Livedoor Weather Web Service / LWWS）互換のAPI」に取得先を変更
-
-https://github.com/timej/WeatherAPI
-
-GPL-3.0 License
+「livedoor 天気」→ 終了
+「お天気Webサービス、
+（Livedoor Weather Web Service / LWWS）互換のAPI」→ 情報更新停止
+ → 現在、天気予報 API（livedoor 天気互換)に変更
 
 ↓ livedoor 天気より ↓
 
