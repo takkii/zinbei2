@@ -59,6 +59,8 @@ zinbei2は商用、法人または個人向け、有償版のzinbeiです。
 
 #### 引用 : 「Livedoor の「お天気Webサービス」互換のAPIのベータ版公開しています」
 
+※ 10月1日以降、天気予報のデータが更新されなくなったため利用を中止しました。
+
 [天気予報 API（livedoor 天気互換)](https://weather.tsukumijima.net/)
 
 #### 引用文
