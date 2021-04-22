@@ -1279,14 +1279,14 @@ GPL-3.0 License
         puts 'エラーです。IDを確認してください！'
       end
 
-      url = 'http://weather2.time-j.net/wws/v1?city=' + ID
+      url = 'https://weather.tsukumijima.net/api/forecast?city=' + ID
       uri = URI.parse(url)
       json = Net::HTTP.get(uri)
       result = JSON.parse(json)
       today_tel = result['forecasts'][0]['telop']
       tomor_tel = result['forecasts'][1]['telop']
-      min_tem = result['forecasts'][0]['temperature']['min']['celsius']
-      max_tem = result['forecasts'][0]['temperature']['max']['celsius']
+      min_tem = result['forecasts'][1]['temperature']['min']['celsius']
+      max_tem = result['forecasts'][1]['temperature']['max']['celsius']
       des = result['description']['text']
       des1 = result['description']['publicTime']
       des2 = DateTime.parse(des1)
