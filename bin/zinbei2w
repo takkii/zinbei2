@@ -1276,11 +1276,11 @@ atom        gem install feedjira (v3.0.0~)
         p es
         puts 'エラーです。IDを確認してください！'
       end
-
-      url = 'https://weather.tsukumijima.net/api/forecast?city=' + ID
+      
+      url = 'https://weather.tsukumijima.net/api/forecast?city='+ ID
       uri = URI.parse(url)
       json = Net::HTTP.get(uri)
-      result = JSON.parse(json)
+      result = JSON.parse!(json)
       today_tel = result['forecasts'][0]['telop']
       tomor_tel = result['forecasts'][1]['telop']
       min_tem = result['forecasts'][1]['temperature']['min']['celsius']
@@ -1288,8 +1288,8 @@ atom        gem install feedjira (v3.0.0~)
       des = result['description']['text']
       des1 = result['description']['publicTime']
       des2 = DateTime.parse(des1)
-
-# puts result
+      
+      # puts result
       puts ' 天気予報 '.center(60, '-')
       puts ''
       puts '今日の天気は、' + today_tel + ' でしょう '
@@ -1308,7 +1308,6 @@ atom        gem install feedjira (v3.0.0~)
       puts des2.strftime('%Y年%m月%d日 %H時%M分%S秒')
       puts ''
       puts ' 天気概況文 '.center(60, '-')
-
 
       print '>'
 
