@@ -18,12 +18,12 @@ module Zinbei
   def start
     puts '
 
-    == Contributing to zinbei
+    == Contributing to zinbei2
 
     ** Fixed **
     The number of files was reduced.
 
-    Remind zinbei option
+    Remind zinbei2 option
     * add -v,version
     * add -d,datetime
     * add -h,help
@@ -31,7 +31,7 @@ module Zinbei
 
     New zinbei option
     **How to use**
-    [zinbei -m notojima.txt]
+    [zinbei2 -m notojima.txt]
     * add -m
     * add -n
     * add -o
@@ -51,14 +51,14 @@ module Zinbei
     * OneRunner *Eval * week
 
     ** Try **
-    zinbeiw
+    zinbei2w
     >help
     >exit
 
     ----Please enter the following words------
     |   in the command prompt for windows    |
     |                                        |
-    |              zinbei help               |
+    |              zinbei2 help              |
     |                                        |
     ------------------------------------------
     wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
@@ -77,7 +77,7 @@ module Zinbei
     puts '
     The MIT License
 
-    Copyright (c) 2016 Takayuki Kamiyama
+    Copyright (c) 2023 Takayuki Kamiyama
 
     Permission is hereby granted, free of charge,
     to any person obtaining a copy of this software and
@@ -111,7 +111,7 @@ module Zinbei
     puts 'COMMAND'.center(60, '-')
 
     puts '
-    [Zinbei]
+    [Zinbei2]
 
     -s,start           Start Pages.
 
@@ -123,11 +123,11 @@ module Zinbei
 
     [Example]
 
-    $zinbei -n notojima.txt
-    $zinbei -m notojima.txt
-    $zinbei -u notojima.txt
-    $zinbei -o notojima.txt
-    $zinbei -z notojima.txt
+    $zinbei2 -n notojima.txt
+    $zinbei2 -m notojima.txt
+    $zinbei2 -u notojima.txt
+    $zinbei2 -o notojima.txt
+    $zinbei2 -z notojima.txt
 
     -n                 The number line checked end load file.
 
@@ -194,7 +194,7 @@ module Zinbei
      ))wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww((
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     '
-    puts 'RubyShell(Zinbei) is Copyright Takayuki Kamiyama,I made in 2012.'
+    puts 'Zinbei2 is Copyright Takayuki Kamiyama,I made in 2012.'
     puts ''
   end
 
