@@ -222,7 +222,7 @@ module Zinbei
     require 'zinbei/complete_list'
   end
 
-  module_function :start, :version, :datetime, :license, :command, :soft, :str, :line, :upcase, :downcase, :num
+  module_function :start, :version, :datetime, :license, :command, :soft, :str, :line, :upcase, :downcase, :num, :complete
 end
 
 v = /\Aversion\z/
