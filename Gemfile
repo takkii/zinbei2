@@ -4,8 +4,7 @@ source 'http://rubygems.org'
 # gemspec
 
 gem 'bundler'
-gem 'rspec'
 gem 'rake'
 gem 'tanraku'
 gem 'minitest-runners'
-gem 'minitest-repoters'
+gem 'minitest-reporters'
