@@ -10,7 +10,7 @@ module Zinbei
   def version
     require 'zinbei/version'
     print 'Zinbei2_VERSION : ' + Zinbei::VERSION
-    puts ' : [feature_release] '
+    puts ' : [Near_Future] '
   end
 
   # バージョンの変更点
