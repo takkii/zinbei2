@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-open("../../complete/source/ruby-complete") do |f|
+open("#{File.dirname(__FILE__)}/complete/source/ruby-complete") do |f|
   while (name = f.readlines)
     name.sort!
     str = name.join(', ')
@@ -9,5 +9,5 @@ open("../../complete/source/ruby-complete") do |f|
       puts n
     end
     exit!
- end
+  end
 end
