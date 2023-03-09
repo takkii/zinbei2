@@ -3,6 +3,9 @@
 require 'mecab'
 require 'natto'
 
+Encoding.default_internal = 'UTF-8'
+Encoding.default_external = 'UTF-8'
+
 # Elecjar top-level class
 class Elecjar
   def hashi
