@@ -9,5 +9,5 @@ open("#{File.dirname(__FILE__)}/complete/source/ruby-complete") do |f|
       puts n
     end
     exit!
- end
+  end
 end
