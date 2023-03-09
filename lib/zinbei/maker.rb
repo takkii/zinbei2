@@ -3,29 +3,29 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'openssl'
 
+Encoding.default_internal = 'UTF-8'
+Encoding.default_external = 'UTF-8'
+
 class Pass
-def word
-key = OpenSSL::PKey::RSA.new(1024)
-digest = OpenSSL::Digest::SHA1.new()
+  def word
+    key = OpenSSL::PKey::RSA.new(1024)
+    digest = OpenSSL::Digest::SHA1.new()
+    issue = sub = OpenSSL::X509::Name.new()
+    sub.add_entry('C', 'JP')
+    sub.add_entry('ST', 'Kanazawa city')
+    sub.add_entry('CN', 'Takayuki Kamiyama')
 
-issue = sub = OpenSSL::X509::Name.new()
+    cer = OpenSSL::X509::Certificate.new()
+    cer.not_before = Time.at(0)
+    cer.not_after = Time.at(0)
+    cer.public_key = key
+    cer.serial = 1
+    cer.issuer = issue
+    cer.subject = sub
+    cer.sign(key, digest)
 
-# ì¬Òî•ñ‚ğ•ÏX‚·‚é‰ÓŠ
-sub.add_entry('C', 'JP')
-sub.add_entry('ST', 'Kanazawa city')
-sub.add_entry('CN', 'Takayuki Kamiyama')
-
-cer = OpenSSL::X509::Certificate.new()
-cer.not_before = Time.at(0)
-cer.not_after = Time.at(0)
-cer.public_key = key
-cer.serial = 1
-cer.issuer = issue
-cer.subject = sub
-
-cer.sign(key, digest)
-print cer.to_text
-end
+    print cer.to_text
+  end
 end
 
 # https://docs.ruby-lang.org/ja/latest/library/openssl.html

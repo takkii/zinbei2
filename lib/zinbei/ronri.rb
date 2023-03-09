@@ -1,5 +1,3 @@
-# coding: sjis
-
 # frozen_string_literal: true
 
 require 'kconv'
@@ -7,16 +5,17 @@ require 'kconv'
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-Encoding.default_internal = 'SJIS'
+Encoding.default_internal = 'UTF-8'
+Encoding.default_external = 'UTF-8'
 
 class Scan
   def search_text
     puts ''
-    one = ARGV[0].tosjis
+    one = ARGV[0].toutf8
     open(one) do |f|
       while (str2 = f.gets)
         str = str2.chomp!
-        two = ARGV[1].tosjis
+        two = ARGV[1].toutf8
         three = /^(?=.*#{two})/o
 
         begin

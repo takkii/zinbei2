@@ -3,6 +3,9 @@
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
+Encoding.default_internal = 'UTF-8'
+Encoding.default_external = 'UTF-8'
+
 class Scomber
   def sava
     one = ARGV[0]
@@ -10,7 +13,7 @@ class Scomber
     three = /#{ARGV[2]}/o
     four = ARGV[3]
 
-    File.open(two, 'a:sjis', perm = 0o666) do |out_f|
+    File.open(two, 'a:utf-8', perm = 0o666) do |out_f|
       File.open(one) do |in_f|
         out_f.write in_f.read.gsub(three, four)
         print ' 置換処理を行い書き込み処理をしました、終了します... '
