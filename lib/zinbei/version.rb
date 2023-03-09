@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 module Zinbei
-  VERSION = '2.0.1'.map!(&:freeze).freeze
+  VERSION = '2.0.2'.freeze
 end
 
 # zinbei version change log
-# 2.x.x ～ GitLab is start, Please buy new License.
+# 2.x.x ～ GitLab is start.
 
 __END__
