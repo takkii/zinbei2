@@ -6,11 +6,12 @@
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
+# Feature Zinbei2
 module Zinbei
   def version
     require 'zinbei/version'
-    print 'Zinbei2_VERSION : ' + Zinbei::VERSION
-    puts ' : [Near_Future] '
+    print Zinbei::VERSION
+    puts ' : [zinbei2_future_version] '
   end
 
   # バージョンの変更点
