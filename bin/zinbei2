@@ -7,7 +7,9 @@ lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 # Feature Zinbei2
-module Zinbei
+module Zinbei2
+  module_function
+
   def version
     require 'zinbei/version'
     print Zinbei::VERSION
@@ -222,9 +224,9 @@ module Zinbei
   def complete
     require 'zinbei/complete_list'
   end
-
-  module_function :start, :version, :datetime, :license, :command, :soft, :str, :line, :upcase, :downcase, :num, :complete
 end
+
+include Zinbei2
 
 v = /\Aversion\z/
 ve = /\A[-][v]\z/
@@ -246,41 +248,41 @@ r = /\A[-][r]\z/
 one = ARGV[0]
 
 if one.nil?
-  Zinbei.soft
+  soft
 elsif one.match?(v)
   require 'zinbei/ika'
-  Zinbei.version
+  version
 elsif one.match?(ve)
-  Zinbei.version
+  version
 elsif one.match?(d)
-  Zinbei.datetime
+  datetime
 elsif one.match?(da)
   require 'zinbei/ika'
-  Zinbei.datetime
+  datetime
 elsif one.match?(he)
-  Zinbei.license
+  license
 elsif one.match?(h)
-  Zinbei.license
+  license
 elsif one.match?(s)
-  Zinbei.start
+  start
 elsif one.match?(so)
-  Zinbei.start
+  start
 elsif one.match?(co)
-  Zinbei.command
+  command
 elsif one.match?(com)
-  Zinbei.command
+  command
 elsif one.match?(m)
-  Zinbei.str
+  str
 elsif one.match?(n)
-  Zinbei.line
+  line
 elsif one.match?(o)
-  Zinbei.downcase
+  downcase
 elsif one.match?(u)
-  Zinbei.upcase
+  upcase
 elsif one.match?(z)
-  Zinbei.num
+  num
 elsif one.match?(r)
-  Zinbei.complete
+  complete
 else
   puts 'Please choose an option.'
 end
