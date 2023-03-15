@@ -7,7 +7,6 @@ module Zinbei
   VERSION = '2.0.4'.freeze
 end
 
-# zinbei version change log
-# 2.x.x ～ GitLab is start.
+# 2.0.x ~ GitHub Open Source Project.
 
 __END__
