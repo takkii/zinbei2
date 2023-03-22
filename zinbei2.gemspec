@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["takkii"]
   s.email = "karuma.reason@gmail.com"
-  s.executables = %w(zinbei2 zinbei2w iruka key night rantan rice sava tomoshibi)
+  s.executables = %w(zinbei2 zinbei2w zinbei2e)
   s.files = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   s.homepage = "https://github.com/takkii/zinbei2"
   s.metadata = { "github_repo" => "ssh://github.com/takkii/zinbei2" }

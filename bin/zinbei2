@@ -146,11 +146,11 @@ module Zinbei2
 
     < how to use >
 
-    [rantan] [ File name ] [ String or regular expression ]
+    [zinbei2] [-e] [ File name ] [ String or regular expression ]
 
     < Example >
 
-    >rantan notojima.txt wajima
+    >zinbei2e -e notojima.txt wajima
 
     If it evaluates whether there is any character string of wajima
     to notojima.txt and is in it, one of them will be outputted!
@@ -159,11 +159,11 @@ module Zinbei2
 
     < how to use>
 
-    [sava] [Filename (read)] [Filename (write)] [change before word] [change after word]
+    [zinbei2e] [-s] [Filename (read)] [Filename (write)] [change before word] [change after word]
 
     <Example>
 
-    >sava notojima.txt Example.txt roman ruby
+    >zinbei2e -s notojima.txt Example.txt roman ruby
 
     Example.txt new_make_file after roman → ruby changed.
 
@@ -171,11 +171,11 @@ module Zinbei2
 
     <how to use>
 
-    [night] [Filename (write)] [want to write word]
+    [zinbei2e] [-n] [Filename (write)] [want to write word]
 
     <Example>
 
-    night dark.txt huhahahahaha...
+    zinbei2e -n dark.txt huhahahahaha...
 
     dark.txt into word huhahahahaha...
     '

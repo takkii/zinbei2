@@ -8,10 +8,10 @@ Encoding.default_external = 'UTF-8'
 
 class Scomber
   def sava
-    one = ARGV[0]
-    two = ARGV[1]
-    three = /#{ARGV[2]}/o
-    four = ARGV[3]
+    one = ARGV[1]
+    two = ARGV[2]
+    three = /#{ARGV[3]}/o
+    four = ARGV[4]
 
     File.open(two, 'a:utf-8', perm = 0o666) do |out_f|
       File.open(one) do |in_f|
@@ -22,16 +22,6 @@ class Scomber
       end
     end
   end
-end
-
-me = ARGV[0]
-
-if me.nil?
-  print 'sava is zinbei in Copyright Takayuki Kamiyama,I made in 2016.'
-elsif me
-  Scomber.new.sava
-else
-  print 'Not other arguments!'
 end
 
 __END__

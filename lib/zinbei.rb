@@ -11,11 +11,11 @@ Encoding.default_external = 'UTF-8'
 class Scan
   def search_text
     puts ''
-    one = ARGV[0].toutf8
+    one = ARGV[1].toutf8
     open(one) do |f|
       while (str2 = f.gets)
         str = str2.chomp!
-        two = ARGV[1].toutf8
+        two = ARGV[2].toutf8
         three = /#{two}/o
         utf8_str = str.toutf8
 
@@ -37,16 +37,6 @@ class Scan
       puts f.eof?
     end
   end
-end
-
-one = ARGV[0]
-
-if one.nil?
-  print 'rantan is zinbei2 in Copyright Takayuki Kamiyama, I made in 2016.'
-elsif one
-  Scan.new.search_text
-else
-  print 'Not other arguments!'
 end
 
 __END__

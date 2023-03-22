@@ -12,7 +12,7 @@ class Elecjar
     m = MeCab::Tagger.new('-Owakati')
     word = Hash.new(0)
     begin
-      files = File.open(ARGV[0])
+      files = File.open(ARGV[1])
       text = files.read
       m.parse(text).scan(/(?:[ぁ-ヶ]|[亜-黑]|[a-zA-Z_0-9]|ー)+/) { |str| word[str] += 1 }
       print word.sort_by { |k, v| k <=> v }
