@@ -18,14 +18,17 @@ module Zinbei2
 
   def tomoshibi
     require 'zinbei/ronri'
+    Scan.new.search_text
   end
 
   def sava
     require 'zinbei/scom'
+    Scomber.new.sava
   end
 
   def night
     require 'zinbei/word'
+    Scomber2.new.sava2
   end
 
   def key
@@ -34,6 +37,7 @@ module Zinbei2
 
   def iruka
     require 'zinbei/write'
+    Writer.new.word
   end
 
   def rice
@@ -60,6 +64,7 @@ module Zinbei2
 
   def rantan
     require 'zinbei'
+    Scan.new.search_text
   end
 end
 
