@@ -11,7 +11,7 @@ class Elecjar
   def costar_chawan
     nx = Natto::MeCab.new
     begin
-      file2 = File.open(ARGV[0])
+      file2 = File.open(ARGV[1])
       texts = file2.read
       puts nx.parse(texts) do |x|
         puts "#{x.feature}\t#{x.surface}"

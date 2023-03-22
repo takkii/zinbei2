@@ -11,7 +11,7 @@ class Elecjar
   def water
     m = MeCab::Tagger.new('-Owakati')
     begin
-      file = File.open(ARGV[0])
+      file = File.open(ARGV[1])
       text = file.read
       p m.parse(text).split(' ')
     end

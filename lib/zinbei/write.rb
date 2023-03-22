@@ -8,8 +8,8 @@ Encoding.default_external = 'UTF-8'
 
 class Writer
   def word
-    one = ARGV[0]
-    two = ARGV[1]
+    one = ARGV[1]
+    two = ARGV[2]
 
     File.open(one, 'a:utf-8', perm = 0o666) do |out_f|
       out_f.write(two)
@@ -17,16 +17,6 @@ class Writer
       out_f.close
     end
   end
-end
-
-me = ARGV[0]
-
-if me.nil?
-  print 'iruka is zinbei in Copyright Takayuki Kamiyama,I made in 2016.'
-elsif me
-  Writer.new.word
-else
-  print 'Not other arguments!'
 end
 
 __END__
