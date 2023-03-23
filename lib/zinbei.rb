@@ -27,6 +27,8 @@ class Scan
           end
         rescue StandardError
           print ''
+        rescue NoMethodError
+          print ''
         ensure
           print ''
         end
