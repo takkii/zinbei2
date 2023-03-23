@@ -15,7 +15,7 @@ class Scan
     open(one) do |f|
       while (str2 = f.gets)
         str = str2.chomp!
-        two = ARGV[2].toutf8
+        two = ARGV[2]
         three = /#{two}/o
         utf8_str = str.toutf8
 
@@ -26,6 +26,8 @@ class Scan
             puts ''
           end
         rescue StandardError
+          print ''
+        rescue NoMethodError
           print ''
         ensure
           print ''
